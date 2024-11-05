@@ -71,7 +71,7 @@ body {
     color: var(--text-light);
     font-size: 1.5rem;
     position: absolute;
-    right: 0;
+    left: 0;
     top: 50%;
     transform: translateY(-50%);
     z-index: 1000;
