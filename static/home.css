@@ -1,24 +1,33 @@
-#home {
-    text-align: center;
-    min-height: 80vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+/* Base Styles */
+
+/* Banner Section Styles */
+#banner {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Adjust height to be full viewport for desktop */
+    overflow: hidden;
 }
 
-.company-name {
-    font-size: 4rem;
-    color: var(--accent-green);
-    font-weight: 800;
-    margin-bottom: 1rem;
+#banner .banner-image {
+    width: 100%; /* Make the image take the full width */
+    height: 100%; /* Ensure the image height is 100% of the container */
+    object-fit: cover; /* Ensure the image covers the area without stretching */
+    object-position: center; /* Center the image */
 }
 
-.tagline {
-    font-size: 1.5rem;
-    color: var(--text-muted);
-    margin-bottom: 2rem;
+/* Mobile Banner Styles */
+#banner-mobile {
+    display: none; /* Hide mobile banner by default */
 }
 
+#banner-mobile .banner-image {
+    width: 100%;
+    height: 40vh; /* Set a smaller height for mobile */
+    object-fit: cover;
+    object-position: center;
+}
+
+/* About Section */
 #about {
     background-color: var(--secondary-bg);
 }
@@ -29,6 +38,7 @@
     text-align: center;
 }
 
+/* Services Section */
 .services-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -77,6 +87,18 @@
 
 /* Mobile Responsive Design */
 @media (max-width: 768px) {
+    #banner {
+        display: none; /* Hide desktop banner on small screens */
+    }
+
+    #banner-mobile {
+        display: block; /* Show mobile banner on small screens */
+    }
+
+    #banner-mobile .banner-image {
+        height: 100%; /* Adjust height for mobile view */
+    }
+
     .services-grid {
         grid-template-columns: 1fr;
         gap: 1.5rem;

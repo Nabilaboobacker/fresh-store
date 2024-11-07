@@ -43,6 +43,12 @@ body {
     position: relative;
 }
 
+/* Mobile-only Home Link */
+.mobile-home {
+    display: none; /* Hide by default */
+}
+
+/* Main Navigation Links */
 .nav-links {
     display: flex;
     gap: 2rem;
@@ -50,7 +56,8 @@ body {
     justify-content: center;
 }
 
-.nav-links a {
+.nav-links a,
+.mobile-home a {
     color: var(--text-light);
     text-decoration: none;
     font-weight: 500;
@@ -58,7 +65,8 @@ body {
     transition: color 0.3s;
 }
 
-.nav-links a:hover {
+.nav-links a:hover,
+.mobile-home a:hover {
     color: var(--accent-green);
 }
 
@@ -130,6 +138,16 @@ section {
 
 /* Mobile Responsive Styles */
 @media (max-width: 768px) {
+    /* Show Mobile Home link */
+    .mobile-home {
+        display: flex;
+        justify-content: center;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        top: -1;
+    }
+
     /* Hamburger Menu */
     .hamburger {
         display: block;

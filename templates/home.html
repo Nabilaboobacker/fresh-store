@@ -2,7 +2,7 @@
 {% load static %}
 
 {% block title %}
-<title>Fresh Vegetables and Fruits-Home</title>
+<title>Fresh Vegetables and Fruits - Home</title>
 {% endblock %}
 
 {% block meta %}
@@ -17,45 +17,51 @@
 
 {% block body %}
 
-    {% comment %} Brand Representation {% endcomment %}
-    <section id="home">
-        <h1 class="company-name">Fresh Vegetables and Fruits</h1>
-        <p class="tagline">Wholesale, Instore, and Delivery Services</p>
-    </section>
-    {% comment %} Brand Representation {% endcomment %}
+<!-- Desktop Banner -->
+<section id="banner">
+    <img src="{% static 'desktop views 1.png' %}" alt="Fresh Vegetables and Fruits Banner" class="banner-image">
+</section>
 
-    {% comment %} About Section {% endcomment %}
-    <section id="about">
-        <h2 class="section-title">Welcome to Fresh Vegetables and Fruits</h2>
-        <div class="about-content">
-            <p>Fresh Vegetables and Fruits is your premier destination for premium fruits and vegetables sourced from the finest farms across the globe. We take pride in delivering farm-fresh produce directly to your table, ensuring quality and freshness in every bite.</p>
+<!-- Mobile Banner -->
+<section id="banner-mobile">
+    <img src="{% static 'mobile view.png' %}" alt="Fresh Vegetables and Fruits Mobile Banner" class="banner-image">
+</section>
+
+<!-- About Section -->
+<section id="about">
+    <h2 class="section-title">Welcome to Fresh Vegetables and Fruits</h2>
+    <div class="about-content">
+        <p>Fresh Vegetables and Fruits is your premier destination for premium fruits and vegetables sourced from the finest farms across the globe. We take pride in delivering farm-fresh produce directly to your table, ensuring quality and freshness in every bite.</p>
+    </div>
+</section>
+
+<!-- Services Section -->
+<section id="services">
+    <h2 class="section-title">Our Services</h2>
+    <div class="services-grid">
+
+        <!-- Wholesale Supply Service -->
+        <div class="service-card">
+            <div class="service-image">WS</div>
+            <h3 class="service-title">Wholesale Supply</h3>
+            <p class="service-description">Offering competitive bulk pricing, flexible payment terms, and reliable delivery schedules, ensuring quality in every batch.</p>
         </div>
-    </section>
 
-    {% comment %} Our Services {% endcomment %}
-    <section id="services">
-        <h2 class="section-title">Our Services</h2>
-        <div class="services-grid">
-
-            <div class="service-card">
-                <div class="service-image">WS</div>
-                <h3 class="service-title">Wholesale Supply</h3>
-                <p class="service-description">Offering competitive bulk pricing, flexible payment terms, and reliable delivery schedules, ensuring quality in every batch.</p>
-            </div>
-
-            <div class="service-card">
-                <div class="service-image">IS</div>
-                <h3 class="service-title">In-Store Shopping</h3>
-                <p class="service-description">Discover a wide selection of fresh produce with seasonal specials, expert staff assistance, and a clean shopping environment.</p>
-            </div>
-
-            <div class="service-card">
-                <div class="service-image">DS</div>
-                <h3 class="service-title">Delivery Services</h3>
-                <p class="service-description">Convenient same-day delivery, personalized orders, and safe, contactless delivery right to your door.</p>
-            </div>
+        <!-- In-Store Shopping Service -->
+        <div class="service-card">
+            <div class="service-image">IS</div>
+            <h3 class="service-title">In-Store Shopping</h3>
+            <p class="service-description">Discover a wide selection of fresh produce with seasonal specials, expert staff assistance, and a clean shopping environment.</p>
         </div>
-    </section>
-    {% comment %} Our Services {% endcomment %}
+
+        <!-- Delivery Services -->
+        <div class="service-card">
+            <div class="service-image">DS</div>
+            <h3 class="service-title">Delivery Services</h3>
+            <p class="service-description">Convenient same-day delivery, personalized orders, and safe, contactless delivery right to your door.</p>
+        </div>
+
+    </div>
+</section>
 
 {% endblock %}
