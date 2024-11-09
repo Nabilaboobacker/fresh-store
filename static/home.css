@@ -96,7 +96,7 @@
     }
 
     #banner-mobile .banner-image {
-        height: 100%; /* Adjust height for mobile view */
+        height: 100vh; /* Adjust height for mobile view */
     }
 
     .services-grid {
