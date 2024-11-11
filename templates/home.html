@@ -16,15 +16,23 @@
 {% endblock %}
 
 {% block body %}
-
-<!-- Desktop Banner -->
-<section id="banner">
-    <img src="{% static 'desktop-views-1.png' %}" alt="Fresh Vegetables and Fruits Banner" class="banner-image">
-</section>
-
-<!-- Mobile Banner -->
-<section id="banner-mobile">
-    <img src="{% static 'mobile-view.png' %}" alt="Fresh Vegetables and Fruits Mobile Banner" class="banner-image">
+<!-- Banner Section -->
+<section style="padding-top:1rem;padding-left:0;padding-right:0;">
+<div class="banner-wrapper">
+    <!-- Desktop Banner -->
+    <div class="banner banner-desktop">
+        <img src="{% static 'desktop-views-2.png' %}" 
+             alt="Fresh Vegetables and Fruits Banner" 
+             class="banner-image">
+    </div>
+    
+    <!-- Mobile Banner -->
+    <div class="banner banner-mobile">
+        <img src="{% static 'mobile-view.png' %}" 
+             alt="Fresh Vegetables and Fruits Mobile Banner" 
+             class="banner-image">
+    </div>
+</div>
 </section>
 
 <!-- About Section -->
@@ -39,7 +47,6 @@
 <section id="services">
     <h2 class="section-title">Our Services</h2>
     <div class="services-grid">
-
         <!-- Wholesale Supply Service -->
         <div class="service-card">
             <div class="service-image">WS</div>
@@ -60,8 +67,6 @@
             <h3 class="service-title">Delivery Services</h3>
             <p class="service-description">Convenient same-day delivery, personalized orders, and safe, contactless delivery right to your door.</p>
         </div>
-
     </div>
 </section>
-
 {% endblock %}
